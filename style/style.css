@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh; 
+    /* Necessário informar o height em vh para que  o elemento background-size funcionasse */
+    background-image: url(../imgs/fundo-madeira.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+.root {
+    height: 100vh;
+    position: relative;
+}
+
+.cellphone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.cell {
+    height: 750px;
+}
+
+.frame {
+    position: absolute;
+    top: 50.4%;
+    left: 50.3%;
+    transform: translate(-50%, -50%);   
+    overflow: hidden;
+    width: 86%;
+}
+.frame iframe {
+    border-radius: 2px;
+    overflow: auto;
+    width: 200%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    align-items: end;
+}
+.buttons ul {
+    width: 70px;
+    margin: 10px 10px;
+}
+.buttons li {
+    margin: 10px 10px;
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+
+.logos {
+    display: flex;
+}
+.logos img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.39);
+
+    transition: 350ms;
+
+    /* transition: 150ms; */
+    /* transition é a propriedade utilzada para dar uma transição do estado atual ao novo da pseudoclass */
+}
+.logos img:hover {
+    border: 1px solid brown;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
+
+    transform: translateY(-2px) translateX(-2px);
+}
